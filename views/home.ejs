@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <%- include('./layouts/header'); %>
+    <script src="js/buynow.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+  </head>
+</html>
+<!-- <div class="container">
+  <div class="row my-3">
+    <% for(var i=0; i < products.length; i++) { %>
+    <a
+      href="/product/<%= products[i]._id %>"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="mb-3 mx-3"
+      style="max-width: 500px; color: inherit; text-decoration: none"
+    >
+      <div class="card">
+        <div class="row g-0">
+          <div class="col-md-5">
+            <img
+              src="/files/products/<%= products[i].image %>"
+              class="img-fluid rounded-start"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <h5 class="card-title"><%= products[i].name %></h5>
+              <h3 class="card-text">₹<%= products[i].price %></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <% } %>
+  </div>
+</div> -->
+<div class="container my-5">
+  <div class="card-group">
+    <% for(var i=0; i < products.length; i++) { %>
+      <a
+        href="/product/<%= products[i]._id %>"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mb-3 mx-3"
+        style="max-width: 500px; color: inherit; text-decoration: none"
+      >
+    <div class="card">
+      <img src="/files/products/<%= products[i].image %>" class="card-img-top" width="150" height="150">
+      <div class="card-body">
+        <h5 class="card-title"><%= products[i].name %></h5>
+        <h3 class="card-text">₹<%= products[i].price %></h3>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</div>

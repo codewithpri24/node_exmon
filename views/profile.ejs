@@ -1,0 +1,27 @@
+<%- include("./layouts/header") %>
+<body>
+  <table >
+    <tr>
+      <td colspan="8" >
+        <table>
+        <tr>
+          <td>Name:</td>
+          <td><%= user.name %></td>
+        </tr>
+        <tr>
+          <td>Email:</td>
+          <td><%= user.email %></td>
+        </tr>
+    </table>
+      </td>
+      <td colspan="4">
+        <table> 
+            <tr><td><a href="/edit_profile">Edit Profile</a></td></tr>       
+            <tr>
+                <td><img src="/files/<%= user.image %>" alt="" width="300" height="400"></td>
+        </tr>
+
+      </td>
+    </tr>
+  </table>
+</body>

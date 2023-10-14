@@ -1,0 +1,21 @@
+<%- include('layouts/header')%>
+<div class="container">
+  <table border="1" cellpadding="10">
+    <tr>
+      <th>Product Id</th>
+      <th>Product Name</th>
+      <th>Product Price</th>
+      <th>Product Description</th>
+      <th>Product Image</th>
+    </tr>
+
+    <tr>
+      <td><%= product.id %></td>
+      <td><%= product.name%></td>
+      <td><%= product.price %> $</td>
+      <td><%= product.description %></td>
+      <td><%= product.image %></td>
+    </tr>
+  </table>
+</div>
+<%- include('layouts/footer')%>

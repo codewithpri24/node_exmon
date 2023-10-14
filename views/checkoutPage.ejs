@@ -1,0 +1,21 @@
+<head>
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src gap://ready file://* *; style-src 'self' http://localhost https://* 'unsafe-inline'; script-src 'self' http://xxxx 'unsafe-inline' 'unsafe-eval';"
+  />
+</head>
+<body>
+  <h3>Welcome to Payment Gateway</h3>
+  <form action="payment" method="POST">
+    <script
+      src="//checkout.stripe.com/v2/checkout.js"
+      class="stripe-button"
+      data-key="sk_test_51NJLchSHf1YC4BnD77soPvBzTKgcg3kuDNln2FVa7Bjjl2Y4D6XVHS6UEk36D1JVOtmKeNrYan6OSBArVRdu7ada00Jh3Bfm3i"
+      data-amount="2500"
+      data-currency="inr"
+      data-name="Crafty Gourav"
+      data-description="Handmade Art and Craft Products"
+      data-locale="auto"
+    ></script>
+  </form>
+</body>

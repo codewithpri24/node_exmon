@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+   <%- include('./layouts/header'); %>
+  <body>
+    <h3>Buy Shirt Just in Rs <%= product.price %></h3>
+    <form action="payment" method="POST">
+      <input
+        type="hidden"
+        name="amount"
+        value="<%= parseInt(product.price)*100 %>"
+      />
+      <input type="hidden" name="productName" value="<%= product.name %>" />
+      <script
+        src="//checkout.stripe.com/v2/checkout.js"
+        class="stripe-button"
+        data-key="<%= key %>"
+        data-amount="<%= parseInt(product.price) %>"
+        data-currency="inr"
+        data-name="<%= product.name %>"
+        data-description="<%= product.description %>"
+        data-locale="auto"
+      ></script>
+    </form>
+  </body>
+</html>

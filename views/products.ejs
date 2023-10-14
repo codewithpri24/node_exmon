@@ -1,0 +1,87 @@
+<%- include('./layouts/header')%>
+
+<!-- <div class="modal-wrapper">
+  <div class="modal">
+    <div>
+      <button type="button" class="close">&#10060 Close</button>
+    </div>
+    <form action="">
+      <div>
+        <label for="productName">Product Name</label>
+        <input type="text" id="productName" />
+      </div>
+      <div>
+        <label for="productName">Product Name</label>
+        <input type="text" id="productName" />
+      </div>
+      <div>
+        <label for="productName">Product Name</label>
+        <input type="text" id="productName" />
+      </div>
+      <div>
+        <label for="productName">Product Name</label>
+        <input type="text" id="productName" />
+      </div>
+      <div>
+        <label for="productName">Product Name</label>
+        <input type="text" id="productName" />
+      </div>
+    </form>
+  </div>
+</div> -->
+<div class="container">
+<button id="myBtn">Open Modal</button>
+</div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <form action="">
+      <div>
+        <label for="productName">Product Name</label>
+        <input type="text" id="productName" />
+      </div>
+      <div>
+        <label for="productName">Product Name</label>
+        <input type="text" id="productName" />
+      </div>
+      <div>
+        <label for="productName">Product Name</label>
+        <input type="text" id="productName" />
+      </div>
+      <div>
+        <label for="productName">Product Name</label>
+        <input type="text" id="productName" />
+      </div>
+      <div>
+        <label for="productName">Product Name</label>
+        <input type="text" id="productName" />
+      </div>
+    </form>
+  </div>
+
+</div>
+<div class="container">
+  <table border="1" cellpadding="10">
+    <tr>
+      <th>Product Id</th>
+      <th>Product Name</th>
+      <th>Product Price</th>
+      <th>Product Description</th>
+      <th>Product Image</th>
+    </tr>
+    <% products.forEach(function(product) { %>
+    <tr>
+      <td><%= product.id %></td>
+      <td><%= product.name %></td>
+      <td><%= product.price %> $</td>
+      <td><%= product.description %></td>
+      <td><%= product.image %></td>
+      <td><a href="product/<%= product.id %>">&#x21D2</a></td>
+    </tr>
+    <% }) %>
+  </table>
+</div>
+<%- include('./layouts/footer')%>
+

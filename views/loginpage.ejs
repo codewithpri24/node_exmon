@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <!-- <script type="text/javascript">
+        $(document).ready(() => {
+          $("#form1").submit((event) => {
+            event.preventDefault();
+  
+            $.ajax({
+              type: "POST",
+              url: "/",
+              data: $("#form1").serialize(),
+              dataType: "json",
+              success: (response) => {
+                $("#form1")[0].reset();
+  
+                document.getElementById("check").innerHTML = response.Success;
+                //ADD THIS CODE
+                setTimeout(() => {
+                  document.getElementById("check").innerHTML = "";
+                }, 3000);
+                if (response.Success == "You are regestered,You can login now.") {
+                  document.getElementById("aa").click();
+                }
+              },
+              error: () => {
+                document.getElementById("error").innerHTML = "";
+              },
+            });
+          });
+        });
+      </script> -->
+  </head>
+  <body>
+    <%- include('./layouts/header1')%> 
+    <div class="container my-3">
+      <% if (msg.length>0 ) { %>
+      <div class="alert alert-<%= type %>"><%= msg %></div>
+      <% } %>
+      <form action="/login" method="post" id="form1">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            aria-describedby="emailHelp"
+          />
+          <div id="emailHelp" class="form-text">
+            We'll never share your email with anyone else.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" name="password" />
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+    </div>
+  </body>
+</html>

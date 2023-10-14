@@ -1,0 +1,63 @@
+<html>
+  <head></head>
+  <body>
+    <%- include('./layouts/header1')%>
+    <h2>Product add</h2>
+    <div class="container my-3">
+      <form
+        action="/admin/add_products"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div class="mb-3">
+          <label for="exampleInputName" class="form-label">Product Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="name"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Product Description</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="description"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Price</label>
+          <input type="number" class="form-control" name="price" />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword2" class="form-label">Category</label>
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            name="category"
+          >
+            <option selected>Select</option>
+            <option value="cloths">Cloths</option>
+            <option value="food">Food</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputUpload" class="form-label"
+            >Upload Your Image</label
+          >
+          <input
+            type="file"
+            class="form-control"
+            name="upload_file"
+            id="upload_file"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
